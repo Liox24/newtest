@@ -1,0 +1,46 @@
+<!-- //2] create a code for factorial number 
+ 
+#include<bits/stdc++.h>
+using namespace std;
+int fact(double n){
+    double fact = 1;
+    for (int i=0;i<n;i++){
+        fact = fact * (n - i);
+    }
+    return fact;
+}
+int main(){
+    double n;
+    cout<<"Enter Num :";
+    cin>>n;
+    double p =fact(n);
+    cout<<"Ans of "<<n<<"! is : "<<p; 
+    return 0;
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter number :" id="num">
+    <button onclick="fun();">Get Factorial</button>
+    <br><br>
+    <div id="ans"> 
+    </div>
+</body>
+<script>
+
+    function fun(){
+        let num  = document.getElementById("num").value;
+        let fact = 1;
+        for (let i = 0 ; i < num ; i++){
+            fact = fact * (num - i);
+        }
+        document.getElementById("ans").innerHTML    = fact;
+    }
+</script>
+</html>

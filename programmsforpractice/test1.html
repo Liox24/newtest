@@ -1,0 +1,54 @@
+<!-- // 1] create a code for upto 300 fibbonacci searies
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter for upto number : ";
+//     cin>>n;
+//     int a = 0 , b = 1 , c = 0;
+//     cout<<a<<" "<<b;
+//     while(c < n){
+//         c = a + b;
+//         if (c > n){
+//             break;
+//     }
+//         cout<<" "<<c<<" ";
+//         a = b;
+//         b = c;
+//     }
+// }
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <input type="text" placeholder="Enter number :" id="num">
+    <button onclick="fun();">Get Fibbonacci</button>
+    <br><br>
+    <div id="ans">
+       
+    </div>
+ </body>
+ <script>
+    function fun(){
+        let num = document.getElementById("num").value;
+        let a = 0 , b = 1 , c = 0;
+        document.getElementById("ans").innerHTML += a + " " + b + " "; 
+        while(c < num){
+           
+            c = a + b;
+            if (c > num){
+                break;
+            }
+            document.getElementById("ans").innerHTML += c + " ";
+            a = b;
+            b = c;
+        }
+    }
+ </script>
+ </html>
